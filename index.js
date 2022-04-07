@@ -28,7 +28,7 @@ app.use("/api", authorRouter);
 app.use("/api", articleRouter);
 app.use("/api", contactRouter);
 
-app.listen(apiPort, () => {
+app.listen(process.env.PORT || apiPort, () => {
   console.log(`Server running on port ${apiPort}`);
   console.log("");
 });
